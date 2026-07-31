@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>House Info</title>
+<style>
+  :root {
+    --bg: #1C2023; --panel: #23282B; --ink: #F2EDE4; --muted: #9AA0A0;
+    --copper: #C97D3D; --teal: #4C7B74;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; min-height: 100%; background: var(--bg); color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    display: flex; align-items: center; justify-content: center; padding: 24px;
+  }
+  .card {
+    width: 100%; max-width: 400px; background: var(--panel); border-radius: 20px;
+    padding: 32px 26px 26px; box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+  }
+  .eyebrow { font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--muted); margin: 0 0 6px; font-weight: 600; }
+  /* EDIT: business name */
+  .business { font-size: 20px; font-weight: 600; margin: 0 0 22px; }
+
+  .row { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid rgba(242,237,228,0.08); }
+  .row .label { font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); }
+  .row .value { font-size: 14.5px; font-weight: 600; }
+
+  .section-title { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--copper);
+                    font-weight: 700; margin: 24px 0 12px; }
+  ul.rules { margin: 0; padding: 0; list-style: none; }
+  ul.rules li { display: flex; gap: 10px; font-size: 14px; color: var(--ink); margin-bottom: 12px; line-height: 1.4; }
+  ul.rules li .dot { flex-shrink: 0; width: 6px; height: 6px; border-radius: 50%; background: var(--teal); margin-top: 7px; }
+
+  .note { font-size: 13px; color: var(--muted); margin: 22px 0 0; line-height: 1.5; }
+  a.back { display: block; text-align: center; margin-top: 22px; color: var(--teal); font-size: 13px; text-decoration: none; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <p class="eyebrow">House Info</p>
+    <!-- EDIT: business name -->
+    <p class="business">Ocean View Guesthouse</p>
+
+    <!-- EDIT: check-in/out times -->
+    <div class="row"><span class="label">Check-in</span><span class="value">From 14:00</span></div>
+    <div class="row"><span class="label">Check-out</span><span class="value">By 10:00</span></div>
+
+    <p class="section-title">House Rules</p>
+    <!-- EDIT: house rules — add, remove, or edit freely -->
+    <ul class="rules">
+      <li><span class="dot"></span> Quiet hours are from 22:00 to 07:00, please keep noise to a minimum for other guests.</li>
+      <li><span class="dot"></span> No smoking indoors — a designated outdoor area is available.</li>
+      <li><span class="dot"></span> Parking is available in the driveway; please let us know if you need a second space.</li>
+      <li><span class="dot"></span> Pets are welcome by prior arrangement only.</li>
+      <li><span class="dot"></span> Please let us know ahead of time if you'd like a late check-out — we'll do our best to accommodate.</li>
+    </ul>
+
+    <!-- EDIT: footer note -->
+    <p class="note">Need anything else during your stay? Just ask at reception or WhatsApp us directly.</p>
+
+    <!-- EDIT: link back to the hub if this page is reached from the tap-hub -->
+    <a class="back" href="guesttap-hub.html">← Back</a>
+  </div>
+</body>
+</html>
